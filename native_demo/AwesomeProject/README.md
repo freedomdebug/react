@@ -12,6 +12,8 @@
     react-native start --port 8001
     如下图
 
+<font color=red size=4 >注意：此处端口经常被占用报错，换一个或释放占用即可</font>
+
 ![Alt text](./problem/6.png)
 
 2.打包程序
