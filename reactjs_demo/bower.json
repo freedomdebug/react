@@ -1,0 +1,21 @@
+{
+  "name": "reactdemo",
+  "authors": [
+    "tommy.hu <tommy.hu@smartac.co>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^16.1.0",
+    "babel": "^5.8.38"
+  }
+}
