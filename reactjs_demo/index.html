@@ -3,94 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <!--核心库-->
     <script src="bower_components/react/react.production.min.js"></script>
+    <!--体统dom相关功能-->
     <script src="bower_components/react/react-dom.production.min.js"></script>
+    <!--ES6->ES5-->
     <script src="bower_components/babel/browser.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
-    <div id="app"></div>
-    <div id="arr"></div>
-    <div id="class"></div>
     <div id="example"></div>
 </body>
 </html>
-<script type="text/babel">
-    //jsx1
-    ReactDOM.render(
-            <h1>test</h1>,
-            document.getElementById("app"),
-            function () {
-                console.log("load finish");
-            }
-    );
-
-    //jsx2
-    let names = ["tommyhu","jack"];
-    ReactDOM.render(
-        <div>
-            {
-                names.map(function(name){
-                    return <div>hello,{name}</div>
-                })
-            }
-        </div>,
-        document.getElementById("app")
-    );
-
-    //jsx3
-    var arr = [
-        <h1>Hello world!</h1>,
-        <h2>React is awesome</h2>,
-    ];
-    ReactDOM.render(
-            <div>{arr}</div>,
-        document.getElementById('arr')
-    );
-
-
-    //jsx4
-    class HelloMessage extends React.Component{
-        render(){
-            return(<h1>Hello {this.props.name}{names}</h1>);
-        }
-    };
-
-    ReactDOM.render(
-            <HelloMessage name="John" />,
-        document.getElementById('class')
-    );
-
-    /*setTimeout(function(){
-        names = ["1212","1212"];
-        ReactDOM.render(
-                <HelloMessage name="John" />,
-            document.getElementById('class')
-        );
-    },3000)*/
-
-    //jsx5
-    class MyComponent extends React.Component{
-        getInitialState() {
-            return {liked: false};
-        };
-        handleClick(event) {
-            this.setState({liked: !this.state.liked});
-        };
-        render(){
-            var text = this.state.liked ? 'like' : 'haven\'t liked';
-            return(
-                    <div>
-                        <input type="text" ref="myTextInput" />
-                        <input type="button" value="Focus the text input" onClick={this.handleClick} />
-                        <p onClick={this.handleClick}>
-                            You {text} this. Click to toggle.
-                        </p>
-                    </div>
-            );
-        }
-    };
-    ReactDOM.render(
-            <MyComponent />,
-        document.getElementById('example')
-    );
-</script>
+<!--使用JSX-->
+<script src="study/l2.js" type="text/babel"></script>
